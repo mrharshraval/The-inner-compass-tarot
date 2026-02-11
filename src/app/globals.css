@@ -1,26 +1,52 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  /* Mystical Tarot Palette */
+  --color-brand-indigo: #2D1B4E;
+  --color-brand-lavender: #B8A4D4;
+  --color-brand-moonlight: #FAFAFA;
+  --color-brand-midnight: #0A0A0A;
+  --color-brand-gold: #D4AF37;
+  --color-brand-purple: #5B3A8F;
+  --color-brand-gray: #E8E8E8;
+
+  /* Legacy support (will phase out) */
+  --color-brand-black: #0A0A0A;
+  --color-brand-light: #FAFAFA;
+
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-cormorant);
+
+  --image-grid-pattern: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(0 0 0 / 0.04)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --background: #F9F9F9;
+  /* Default to light for the top section */
+  --foreground: #050505;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 3D Card Flip Utilities */
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
