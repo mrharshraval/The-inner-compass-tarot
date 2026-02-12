@@ -72,7 +72,7 @@ export function GoogleReviews() {
                     {reviews.map((review, index) => (
                         <div
                             key={index}
-                            className="bg-brand-moonlight p-8 rounded-3xl border border-brand-indigo/10 hover:border-brand-lavender/50 transition-all duration-300"
+                            className="bg-brand-moonlight p-8 rounded-[2rem] border border-brand-purple/10 hover:border-brand-purple/30 hover:shadow-lg hover:shadow-brand-purple/5 hover:-translate-y-2 transition-all duration-300"
                         >
                             {/* Stars */}
                             <div className="flex gap-1 mb-4">

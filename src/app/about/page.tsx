@@ -1,5 +1,7 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { CTASection } from "@/components/ui/CTASection";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 
 export default function AboutPage() {
     return (
@@ -10,10 +12,10 @@ export default function AboutPage() {
             <section className="pt-32 pb-16 px-6 bg-brand-moonlight relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-full bg-[image:var(--image-grid-pattern)] opacity-50 pointer-events-none" />
                 <div className="container mx-auto max-w-4xl relative z-10 text-center">
-                    <span className="text-xs font-bold uppercase tracking-widest text-brand-black/40 mb-4 block">About</span>
-                    <h1 className="font-serif text-5xl md:text-7xl mb-8 text-brand-black leading-tight">
-                        About the Reader
-                    </h1>
+                    <SectionHeader
+                        subheading="About"
+                        heading="About the Reader"
+                    />
                 </div>
             </section>
 
@@ -54,6 +56,7 @@ export default function AboutPage() {
                 </div>
             </section>
 
+            <CTASection />
             <Footer />
         </main>
     );

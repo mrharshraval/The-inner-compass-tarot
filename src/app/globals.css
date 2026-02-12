@@ -4,23 +4,30 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
-  /* Mystical Tarot Palette */
-  --color-brand-indigo: #2D1B4E;
-  --color-brand-lavender: #B8A4D4;
-  --color-brand-moonlight: #FAFAFA;
+  /* Mystical Tarot Palette - Mystic Twilight */
+  --color-brand-indigo: #1E152A;
+  /* Deep Void Purple */
+  --color-brand-lavender: #E6E6FA;
+  /* Mist */
+  --color-brand-moonlight: #FDFCF8;
+  /* Ivory Light */
   --color-brand-midnight: #0A0A0A;
-  --color-brand-gold: #D4AF37;
-  --color-brand-purple: #5B3A8F;
-  --color-brand-gray: #E8E8E8;
+  --color-brand-gold: #9F7AEA;
+  /* Luminous Violet */
+  --color-brand-purple: #4B2C6F;
+  /* Royal Amethyst */
+  --color-brand-gray: #E5E4E8;
+  /* Cool Gray */
 
   /* Legacy support (will phase out) */
-  --color-brand-black: #0A0A0A;
+  --color-brand-black: #120A1F;
+  /* Obsidian */
   --color-brand-light: #FAFAFA;
 
   --font-sans: var(--font-inter);
   --font-serif: var(--font-cormorant);
 
-  --image-grid-pattern: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(0 0 0 / 0.04)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
+
 }
 
 :root {

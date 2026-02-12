@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
-import { Inter, Cormorant_Garamond } from "next/font/google"; // Import Google fonts
+import { Inter, Cormorant_Garamond, Cinzel } from "next/font/google"; // Import Google fonts
 import "./globals.css";
+import { CosmicParticles } from "@/components/ui/CosmicParticles";
+
+// Configure Cinzel (Serif)
+const cinzel = Cinzel({
+  variable: "--font-cinzel",
+  subsets: ["latin"],
+  display: "swap",
+});
 
 // Configure Inter (Sans-serif)
 const inter = Inter({
@@ -29,9 +37,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.variable} ${cormorant.variable} antialiased`}
-      >
+      <body className={`${cinzel.variable} ${cormorant.variable} ${inter.variable} font-sans antialiased bg-brand-moonlight text-brand-black`}>
+        <CosmicParticles />
         {children}
       </body>
     </html>

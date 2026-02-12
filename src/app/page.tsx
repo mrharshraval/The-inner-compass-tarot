@@ -3,7 +3,11 @@ import { Hero } from "@/components/ui/Hero";
 import { Footer } from "@/components/layout/Footer";
 import { GoogleReviews } from "@/components/ui/GoogleReviews";
 import { Button } from "@/components/ui/Button";
+import { CTASection } from "@/components/ui/CTASection";
+import { SectionHeader } from "@/components/ui/SectionHeader";
+import { ContentCard } from "@/components/ui/ContentCard";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Star } from "lucide-react";
 
 export default function Home() {
@@ -17,56 +21,37 @@ export default function Home() {
       {/* Section 2: Services */}
       <section className="py-24 px-6 bg-white relative overflow-hidden">
         <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <span className="text-xs font-bold uppercase tracking-widest text-brand-black/40 mb-4 block">Our Offerings</span>
-            <h2 className="font-serif text-4xl md:text-5xl text-brand-indigo mb-6">Illuminated Readings</h2>
-            <p className="max-w-2xl mx-auto text-brand-black/70 leading-relaxed font-light text-lg">
-              Select the guidance that speaks to your soul. Each session is a sacred container for clarity.
-            </p>
-          </div>
+          <SectionHeader
+            subheading="Our Offerings"
+            heading="Illuminated Readings"
+            description="Select the guidance that speaks to your soul. Each session is a sacred container for clarity."
+          />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Card 1 */}
-            <div className="bg-brand-moonlight text-brand-black p-8 rounded-[2rem] text-center group cursor-pointer hover:-translate-y-2 transition-transform duration-500 border border-brand-purple/10 hover:border-brand-purple/30 hover:shadow-lg hover:shadow-brand-purple/5">
-              <div className="w-full h-48 bg-brand-purple/5 rounded-t-[1.5rem] mb-8 relative overflow-hidden mx-auto flex items-center justify-center">
-                <Star className="w-16 h-16 text-brand-purple opacity-20" />
-              </div>
-              <h3 className="font-serif text-2xl mb-4 text-brand-indigo">The Clarity</h3>
-              <p className="text-brand-black/70 mb-8 text-sm leading-relaxed">Swift insight for pressing questions. A flash of lightning in the dark.</p>
-              <Button variant="outline" className="w-full border-brand-purple/20 text-brand-purple hover:bg-brand-purple hover:text-white">
-                Book Now
-              </Button>
-            </div>
+            <ContentCard
+              imageSrc="/images/service-clarity.jpg"
+              imageAlt="Crystal Light"
+              heading="The Clarity"
+              description="Swift insight for pressing questions. A flash of lightning in the dark."
+              actionLink="/services"
+            />
 
-            {/* Card 2 - Popular */}
-            <div className="bg-brand-indigo text-white p-8 rounded-[2rem] text-center group cursor-pointer hover:-translate-y-2 transition-transform duration-500 border-2 border-brand-indigo shadow-xl shadow-brand-indigo/20 relative overflow-hidden">
-              <div className="absolute top-0 right-0 p-8 opacity-10">
-                <Star className="w-32 h-32 rotate-12" />
-              </div>
-              <div className="w-full h-48 bg-white/5 rounded-t-[1.5rem] mb-8 relative overflow-hidden mx-auto border border-white/5 flex items-center justify-center">
-                <Star className="w-16 h-16 text-white opacity-30" />
-              </div>
-              <div className="flex items-center justify-center gap-2 mb-4">
-                <h3 className="font-serif text-2xl">The Deep Dive</h3>
-                <span className="text-[10px] bg-brand-gold text-brand-black px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">Popular</span>
-              </div>
-              <p className="text-white/80 mb-8 text-sm leading-relaxed">Comprehensive soul mapping. Understand the terrain of your journey.</p>
-              <Button className="bg-brand-gold text-brand-black hover:bg-brand-gold/90 w-full border-0">
-                Book Now
-              </Button>
-            </div>
+            <ContentCard
+              imageSrc="/images/service-deep-dive.jpg"
+              imageAlt="Nebula"
+              heading="The Deep Dive"
+              description="Comprehensive soul-mapping. Uncover the roots of your path."
+              actionLink="/services"
+              variant="featured"
+            />
 
-            {/* Card 3 */}
-            <div className="bg-brand-moonlight text-brand-black p-8 rounded-[2rem] text-center group cursor-pointer hover:-translate-y-2 transition-transform duration-500 border border-brand-purple/10 hover:border-brand-purple/30 hover:shadow-lg hover:shadow-brand-purple/5">
-              <div className="w-full h-48 bg-brand-purple/5 rounded-t-[1.5rem] mb-8 relative overflow-hidden mx-auto flex items-center justify-center">
-                <Star className="w-16 h-16 text-brand-purple opacity-20" />
-              </div>
-              <h3 className="font-serif text-2xl mb-4 text-brand-indigo">The Year Ahead</h3>
-              <p className="text-brand-black/70 mb-8 text-sm leading-relaxed">Twelve months of guidance. Prepare for the cycles to come.</p>
-              <Button variant="outline" className="w-full border-brand-purple/20 text-brand-purple hover:bg-brand-purple hover:text-white">
-                Book Now
-              </Button>
-            </div>
+            <ContentCard
+              imageSrc="/images/service-year-ahead.jpg"
+              imageAlt="Moon Phases"
+              heading="The Year Ahead"
+              description="Twelve months of guidance. Prepare for the cycles to come."
+              actionLink="/services"
+            />
           </div>
         </div>
       </section>
@@ -77,8 +62,13 @@ export default function Home() {
           <div className="relative">
             {/* Decorative Image Placeholder Area */}
             <div className="aspect-[4/5] bg-brand-gray rounded-2xl overflow-hidden relative">
-              <div className="absolute inset-0 bg-brand-indigo/10" />
-              {/*  Ideally we put an image here later */}
+              <div className="absolute inset-0 bg-brand-indigo/10 z-10" />
+              <Image
+                src="/images/about-preeti.jpg"
+                alt="Preeti Jain - Spiritual Guide"
+                fill
+                className="object-cover"
+              />
             </div>
 
             <div className="absolute -bottom-10 -right-10 bg-white p-8 rounded-2xl shadow-xl border border-black/5 max-w-xs">
@@ -117,6 +107,7 @@ export default function Home() {
       {/* Section 4: Google Reviews */}
       <GoogleReviews />
 
+      <CTASection />
       <Footer />
     </main>
   );

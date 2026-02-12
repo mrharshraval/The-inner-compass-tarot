@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 
 export default function HowItWorksPage() {
     const steps = [
@@ -26,15 +27,13 @@ export default function HowItWorksPage() {
 
             {/* Hero Section */}
             <section className="pt-32 pb-16 px-6 bg-brand-moonlight relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-full bg-[image:var(--image-grid-pattern)] opacity-50 pointer-events-none" />
+
                 <div className="container mx-auto text-center max-w-4xl relative z-10">
-                    <span className="text-xs font-bold uppercase tracking-widest text-brand-black/40 mb-4 block">Process</span>
-                    <h1 className="font-serif text-5xl md:text-7xl mb-6 text-brand-black leading-tight">
-                        The Journey
-                    </h1>
-                    <p className="max-w-2xl mx-auto text-brand-black/70 text-lg leading-relaxed font-light">
-                        Every reading follows a sacred path from intention to integration.
-                    </p>
+                    <SectionHeader
+                        subheading="Process"
+                        heading="The Journey"
+                        description="Every reading follows a sacred path from intention to integration."
+                    />
                 </div>
             </section>
 
@@ -47,9 +46,10 @@ export default function HowItWorksPage() {
                                 <span className="text-9xl font-serif text-brand-lavender/20 absolute -top-12 -left-6 -z-10 group-hover:text-brand-lavender/30 transition-colors">
                                     {step.number}
                                 </span>
-                                <div className="bg-[#FAF9F6] p-8 rounded-[2rem] border border-black/5 h-full hover:shadow-lg transition-all duration-300">
-                                    <h3 className="font-serif text-2xl mb-4 text-brand-black">{step.title}</h3>
-                                    <p className="text-brand-black/70 leading-relaxed font-light">{step.description}</p>
+                                <div className="bg-brand-moonlight p-10 rounded-[2rem] border border-brand-purple/10 h-full hover:border-brand-purple/30 hover:shadow-lg hover:shadow-brand-purple/5 hover:-translate-y-2 transition-all duration-300 relative overflow-hidden">
+                                    <div className="absolute inset-0 bg-gradient-to-br from-brand-purple/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                    <h3 className="font-serif text-2xl mb-4 text-brand-indigo relative z-10">{step.title}</h3>
+                                    <p className="text-brand-black/70 leading-relaxed font-light relative z-10">{step.description}</p>
                                 </div>
                             </div>
                         ))}
